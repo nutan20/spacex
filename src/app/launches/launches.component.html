@@ -1,0 +1,35 @@
+<h2>SpaceX Launch Programs</h2>
+
+
+
+<div class="launch">
+    <div class="row">
+        <div class="column" *ngFor="let launch of launchesList">
+            <div class="card">
+                <div style="background-color: #ffff;"></div>
+                <img style="width:200px" src={{launch.links.mission_patch}} alt="">
+                <table>
+                    <tr>
+                        <td class="float-left" class="text_head">{{launch.mission_name}}#{{launch.flight_number}}</td>
+
+                    </tr>
+                    <tr>
+                        <td class="float-left">Mission Ids:</td>
+                    </tr>
+                    <tr>
+                        <td class="float-left">Launch Year:</td>
+                        <td>{{launch.launch_year}}</td>
+                    </tr>
+                    <tr>
+                        <td class="float-left">Successful Launch:</td>
+                        <td>{{launch.launch_success}}</td>
+                    </tr>
+                    <tr>
+                        <td class="float-left">Successful Landing:</td>
+                        <td>{{launch.rocket.first_stage.cores[0].land_success}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
